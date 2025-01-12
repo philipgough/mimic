@@ -1,4 +1,4 @@
-module github.com/bwplotka/mimic
+module github.com/philipgough/mimic
 
 go 1.17
 
