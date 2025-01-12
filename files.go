@@ -56,6 +56,10 @@ func (f *FilePool) Add(fileName string, e encoding.Encoder) {
 	if _, ok := f.m[output]; ok {
 		Panicf("filename clash: %s", output)
 	}
+
+	if f.m == nil {
+		f.m = make(map[string]string)
+	}
 	f.m[output] = string(b)
 }
 
